@@ -74,7 +74,7 @@ double rectangles_tbb(Function function, std::vector <double> begin_point,
     result = tbb::parallel_reduce(
                     tbb::blocked_range<int>(0, sectors), 0.0,
                     [&](tbb::blocked_range<int> r, double running_total) {
-                        for (size_t i = r.begin(); i != r.end(); ++i) {
+                        for (auto i = r.begin(); i != r.end(); ++i) {
                             std::vector <double> half_point(dimension);
                             for (int k = 0; k < dimension; k++) {
                                 int a = std::pow(number_of_partitions, k+1);
