@@ -74,7 +74,7 @@ TEST(Novikov, TestSin2d) {
     std::vector <double> begin_point = { 0, 0 };
     std::vector <double> end_point = { 2, 2 };
     double result;
-    int number_of_partitions = 20;
+    int number_of_partitions = 30;
 
     auto function = [](std::vector <double> vec) {
         return sin(vec[0]) + sin(vec[1]);
